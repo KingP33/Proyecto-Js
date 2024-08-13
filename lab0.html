@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen </title>
+</head>
+<body>
+    <h1>Lab</h1>
+    <script>
+var nombre=new Array(2);
+var salario=new Array(2);
+var iss=new Array(2)
+var afp=new Array(2);
+var renta;
+var nuevo;
+var tramo;
+var x=0,j=0,z=0;
+var montoiss,montoafp;
+var final;
+
+while(z<salario.length){
+    while(x<nombre.length){
+        nombre[x]=prompt("Ingrese su nombre")
+        x++;
+    }
+    salario[z]=parseFloat(prompt("Ingrese el salario"))
+    iss[z]=salario[z]*0.97;
+    afp[z]=salario[z]*6.25;
+    z++;
+
+
+            if(salario[z]>=0.01 && salario[z]<=472){
+              document.write("no aplica");
+            }else if(salario[z]>=472.01 && salario[z]<=895.24) {
+                document.write("Se le hara un descuento de ISS del 3%")+iss;
+                montoiss=salario[z]*0.97;
+                montoafp=salario[z]*6.25;
+                nuevo=(salario[z]-montoiss-montoafp)
+                document.write("su nuevo salario es "+nuevo);
+                while(nuevo>=472.01 && nuevo<=895.24){ 
+                  tramo=472;
+                }
+              
+                }                
+            else if(salario[z]>=895.25 && salario[z]<=2038.10) {
+               
+               document.write("Se le hara un descuento de ISS del 3%")+iss;
+               montoiss=salario[z]*0.97;
+               montoafp=salario[z]*6.25;
+                nuevo=(salario[z]-montoiss-montoafp)
+                document.write("su nuevo salario es "+nuevo);
+                
+                while(nuevo>=895.25 && nuevo<=2038.){
+                    
+                    tramo=895.24;
+                }
+             
+            
+           }else if(salario[z]>=2038.11) {
+               document.write("Se le hara un descuento de ISS del 3%")+iss;
+               montoiss=salario[z]*0.97;
+                montoafp=salario[z]*6.25;
+                nuevo=(salario[z]-montoiss-montoafp)
+                document.write("su nuevo salario es "+nuevo);
+                
+                while(nuevo>=2038.11){
+                   tramo=2038.10;
+                }
+                
+                
+           }
+        }
+
+
+            document.write("________________<br><br>")
+        document.write("Nombre -----------SALARIO---------ISSS---------------AFP-----------------Renta-------------Salario Final <br>")
+        document.write("________________ <br><br>")
+        while (j<salario.length){
+            document.write(nombre[j]+"-------------------"+salario[j]+"--------------------"+iss[j]+"--------------------"+afp[j]+"-------------------------------<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+
+            j++;
+        }
+           
+        
+
+
+            
+
+    </script>
+
+
+
+
+</body>
+</html>

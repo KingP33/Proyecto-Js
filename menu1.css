@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+body{
+    background-image: url(../mod\ 3.8/fon.jpeg);
+    background-size: cover;
+}
+
+nav{
+    max-width: 600px;
+    margin: auto;
+    background-color: #c31616 ;
+    font-size: 20px;
+    margin-top: 50px;
+
+}
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.menu-horizontal >li > a{
+display: block;
+padding: 15px 20px;
+color: rgb(14, 13, 13);
+text-decoration: none;
+
+}
+
+.menu-horizontal >li:hover{
+    background-color: rgb(23, 90, 135);
+
+}
+
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0,0, .5);
+}
+
+.menu-horizontal li:hover .menu-vertical{
+display: block;
+}
+
+.menu-vertical li:hover{
+    background-color: black; 
+}
+.menu-vertical li a {
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px ;
+    text-decoration: none;
+}

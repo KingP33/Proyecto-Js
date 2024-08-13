@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla equivalencias</title>
+
+</head>
+<body>
+    <h1>Tabla Equivalencias</h1>
+    <script>
+        var cant=0;
+        var dolar=1000;
+
+        cant=parseInt(prompt("Ingrese la cantidad de dinero"));
+        while(dolar<1000 || dolar >100000){
+            cant=parseInt(prompt("Ingrese la cantidad de dinero"));
+        }
+       
+        
+
+        document.write("++++++++++TABLA DE EQUIVALENCIAS+++++++++");
+        document.write("________________<br><br>");
+        document.write("DOLARES---------------------BTC------------------------------ETH <br>");
+        document.write("________________ <br><br>");
+        while(dolar<=cant){
+        document.write(dolar+"----------------"+cant/57810+"-----------------"+cant/3062+"<br>");
+        dolar++;
+
+        }
+        document.write("<br>");
+        
+
+ 
+
+    </script>
+</body>
+</html>

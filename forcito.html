@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras repetitvas</title>
+</head>
+<body>
+    <h1>Imprimiendo el contenido de un arreglo</h1>
+    <script>
+        var edades=[10,18,60,27];
+        var suma=0, promedio=0;
+        var mayor=0, menor=0, opc;
+        
+
+    
+       opc=parseInt(prompt("Ingrese la opcion  \n 1 para impresion \n 2 para edades \n 3 para conteo"));
+       while(opc<1  || opc>3)
+        {
+        opc=parseInt(prompt("Ingrese correctamente la opcion  \n 1 para impresion \n 2 para edades \n 3 para conteo"));
+       }
+
+switch(opc){
+
+    case 1: {
+        document.write("Imprimiendo los valores del vector");
+        for (let index = 0; index < edades.length; index++) {
+            document.writeln(edades[index],"-");    
+        }
+        break;
+    }
+
+      case 2:{
+      for (let index = 0; index < edades.length; index++) {
+        suma=suma+edades[index];
+      } 
+      promedio=suma/edades.length;
+      document.write("La edad promedio es "+promedio.toFixed(2))
+      break;
+    }
+    
+case 3:{ 
+document.write("Utilizando conteos");
+for (let index = 0; index < edades.length; index++) {
+   if (edades[index]>=18){
+    mayor++
+   } else {
+    menor++;
+   }
+    
+}
+document.write("la cantidad de menores a 18 son",menor);
+document.write("la cantidad de mayores a 18 son",mayor);
+break;
+}
+}
+
+    </script>
+</body>
+</html>

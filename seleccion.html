@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de belleza</title>
+</head>
+<body>
+    <h1>Bienvenidos</h1>
+    <script>
+        let servicio,forma,costo, cliente;
+        alert("Servicios disponibles")
+        servicio=parseInt(prompt("Ingrese \n 1 para alisado \n 2 para uñas \n 3 para tintes \n 4 para corte \n 5 para depilacion facial"))
+        while(servicio <1 || servicio>5){
+        servicio=parseInt(prompt("Ingrese Correctamente \n 1 para alisado \n 2 para uñas \n 3 para tintes \n 4 para corte \n 5 para depilacion facial"))
+        }
+        descuento=costo*0.25;
+
+        forma=parseInt(prompt("Ingrese la forma de pago \n 1 credito \n 2 efectivo"));
+        while (forma <1 || forma >2){
+            forma=parseInt(prompt("Ingrese correctamente la forma de pago \n 1 credito \n 2 efectivo"));
+        }
+        cliente=parseInt(prompt("Usted tiene tarjeta de cliente frecuente \n 1 si \n 2 no"))
+        while (cliente <1 || cliente >2){
+            forma=parseInt(prompt("Ingrese correctamente \n 1 si \n 2 no"));
+        }
+
+        switch(servicio){
+            case 1:{
+                costo=50;
+                break;
+            }
+                case 2:
+                    {
+                    costo=25;
+                    break;
+                    }
+                    case 3:{
+                        costo=35;
+                        break;
+                    }
+                    case 4:
+                    {
+                    costo=40;
+                    break;
+                    }
+                    case 5:{
+                        costo=15;
+                        break;
+                    }
+
+
+        } 
+       
+        
+            if(forma==1 && servicio==1 &&cliente==1){
+            document.write("Usted se hizo un alisado <br>");
+            document.write("Usted ha cancelado con tarjeta de credito <br>");
+            document.write("Usted es cliente frecuente<br>");
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% "+(costo * 0.10));"<br>"
+            document.write("el pago total sera de "+(costo *1.10))+"<br>";
+            document.write("El pago total con descuento es "+(costo*1.10)*0.75);}
+           
+       /*     
+        }else if (forma==1 && servicio==2 &&cliente==1 ){
+            document.write("Usted se hizo uñas <br>");
+            document.write("Usted ha cancelado con tarjeta de credito <br>");
+            document.write("Usted es cliente frecuente<br>");
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% "+(costo * 0.10))+"<br>";
+            document.write("Se le hara un descuento del 25% "+(costo *0.10)-desc)+"<br>";
+            document.write("el pago total sera de "+(costo *1.10))+"<br>";
+           
+
+        } else if (forma==1 && servicio==3 &&cliente==1){
+        document.write("Usted se hizo un tinte  <br>");
+        document.write("Usted ha cancelado con tarjeta de credito <br>");
+            document.write("Usted es cliente frecuente<br>");
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% "+(costo * 0.10))+"<br>";
+            document.write("Se le hara un descuento del 25% "+(costo *0.10)-desc)+"<br>";
+            document.write("el pago total sera de "+(costo *1.10))+"<br>";
+            document.write("El descuneto propinado es de 25% :"+descuento-costo);
+
+
+        }else if (forma==1 && servicio==4 && cliente==1){
+            document.write("Usted se hizo un corte");
+            document.write("Usted ha cancelado con tarjeta de credito <br>");
+            document.write("Usted es cliente frecuente<br>");
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% "+(costo * 0.10))+"<br>";
+            document.write("Se le hara un descuento del 25% "+(costo *0.10)-desc)+"<br>";
+            document.write("el pago total sera de "+(costo *1.10))+"<br>";
+            document.write("El descuneto propinado es de 25% :"+descuento-costo);
+
+        }else if (forma==1 && servicio==5){
+            document.write("Usted se hizo una depilacion facial")
+            document.write("Usted ha cancelado con tarjeta de credito <br>")
+            document.write("Usted es cliente frecuente<br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% "+(costo * 0.10))+"<br>";
+            document.write("Se le hara un descuento del 25% "+(costo *0.10)-desc)+"<br>";
+            document.write("el pago total sera de "+(costo *1.10))+"<br>";
+            document.write("El descuneto propinado es de 25% :"+descuento-costo);
+        }
+
+
+    //---------------------------------------------------------------------------------
+
+        if(forma==1 && servicio==1){
+            document.write("Usted se hizo un alisado <br>");
+            document.write("Usted ha cancelado con tarjeta de credito <br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% <br>"+(costo * 0.10));
+            document.write("el pago total sera de "+(costo *1.10));
+            
+        } else if (forma==1 && servicio==2){
+        document.write("Usted se hizo uñas <br>");
+            document.write("Usted ha cancelado con tarjeta de credito <br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10%"+(costo * 0.10));
+            document.write("el pago total sera de "+(costo *1.10));
+
+        } else if (forma==1 && servicio==3){
+        document.write("Usted se hizo un tinte  <br>");
+            document.write("Usted ha cancelado con tarjeta de credito <br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% <br>"+(costo * 0.10));
+            document.write("el pago total sera de "+(costo *1.10));
+
+        } else if (forma==1 && servicio==4){
+            document.write("Usted se hizo un corte");
+            document.write("Usted ha cancelado con tarjeta de credito <br>");
+            document.write("Usted es cliente frecuente<br>");
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% <br>"+(costo * 0.10));
+            document.write("el pago total sera de "+(costo *1.10));
+           
+
+        }else if (forma==1 && servicio==5){
+            document.write("Usted se hizo una depilacion facial")
+            document.write("Usted ha cancelado con tarjeta de credito <br>")
+            document.write("Usted es cliente frecuente<br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("Se le hara un recargo del 10% <br>"+(costo * 0.10));
+            document.write("el pago total sera de "+(costo *1.10));
+
+        }
+        
+        
+        else if (forma==2 && servicio==1){
+            document.write("Usted se hizo un alisado <br>");
+            document.write("Usted ha cancelado en efectivo <br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("el pago total sera de "+(costo));
+            
+        } else if (forma==2 && servicio==2){
+        document.write("Usted se hizo uñas <br>");
+            document.write("Usted ha cancelado en efectivo <br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("el pago total sera de "+(costo));
+
+        } else if (forma==2 && servicio==3){
+        document.write("Usted se hizo un tinte  <br>");
+            document.write("Usted ha cancelado en efectivo <br>")
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("el pago total sera de "+(costo));
+
+        } else if (forma==2 && servicio==4){
+            document.write("Usted se hizo un corte");
+            document.write("El costo inicial es de "+costo +"<br>");
+            document.write("el pago total sera de "+(costo));
+          
+
+        }else if (forma==2 && servicio==5){
+            document.write("Usted se hizo una depilacion facial");
+            document.write("El costo inicial es de "+costo +"<br>")
+            document.write("el pago total sera de "+(costo));
+           
+        }
+*/
+
+
+
+    </script>
+
+    
+</body>
+</html>
